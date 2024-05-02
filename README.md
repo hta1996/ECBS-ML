@@ -8,6 +8,7 @@ The code requires the external library: BOOST (https://www.boost.org/).
 
 One also needs to fit your own cmake version, current version in CMakeList.txt is 3.16.5 (2.8.12 is also suitable).
 
+
 ### To compile the code:
 ```
 mkdir build
@@ -24,7 +25,7 @@ make
 
 
 
-## Required Inputs:
+### Required Inputs:
 
   -m [ --map ]        : Input file for map (*string*)
   
@@ -36,7 +37,7 @@ make
 
   -s [ --solver ]     : Solver to use (*int*, 0: EPEA\*, 1: CBS, 2: ECBS, 3: MA-CBS(EPEA\*), 4: MA-CBS(CBS), 5: MA-ECBS, 6: MA-ECBS(EPEA\*), 7: MA-ECBS(CBS), 8: Evaluate path.txt)
  
- ## Optional Inputs:
+ ### Optional Inputs:
 
   -w [ --weight ]     : Suboptimal bound for ECBS (*float*, default: 1.00)
   
@@ -45,6 +46,13 @@ make
   --rt                : Times to restart randomly under cutoff time. This is triggered by time. (*int*, default: 0)
 
   --seed              : Random seed (*int*, default: 0)
+
+
+
+## Training an ML model
+
+Run imitation_learning.py to train an SVM model for one agent size. 
+You would need to specify: (1) the initial weight files if running curriculum learning (or none otherwise) and (2) the agent size.
 
   --debug             : Debug mode (*int*, 0: Nothing, 1: Print all output, 2: Print HL and LL nodes, default: 0)
   
