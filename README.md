@@ -47,13 +47,13 @@ make
 
   --seed              : Random seed (*int*, default: 0)
 
-
+  --debug             : Debug mode (*int*, 0: Nothing, 1: Print all output, 2: Print HL and LL nodes, default: 0)
+  
+  --help              : Produce help message
 
 ## Training an ML model
 
 Run imitation_learning.py to train an SVM model for one agent size. 
 You would need to specify: (1) the initial weight files if running curriculum learning (or none otherwise) and (2) the agent size.
 
-  --debug             : Debug mode (*int*, 0: Nothing, 1: Print all output, 2: Print HL and LL nodes, default: 0)
-  
-  --help              : Produce help message
+
